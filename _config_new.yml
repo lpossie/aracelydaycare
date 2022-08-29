@@ -1,0 +1,23 @@
+url: https://y7kim.github.io
+baseurl: /
+
+# Site settings
+title: Aracely Daycare
+email: vilma@possiefamily.com
+description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+
+
+# Team names, titles and social links
+people:
+- name: Vilma Possie
+  pic: 1
+  position: Owner
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: 894 W 3950 S
+  - line: Riverdale, UT 84405
+
+# Build settings
+markdown: kramdown
+permalink: pretty
