@@ -1,30 +1,28 @@
-Agency Jekyll theme
-====================
+# Sera - Jekyll Theme
 
-Agency theme based on [Agency bootstrap theme ](https://startbootstrap.com/template-overviews/agency/)
+## System Preparation
 
-# How to use
+To use this project, you'll need the following things installed on your machine.
 
-###Portfolio 
+1. [Jekyll](http://jekyllrb.com/docs/) - `$ gem install jekyll bundler`
+2. [Jekyll-Gems](http://jekyllrb.com/docs/) - `$ bundle install`
 
-Portfolio projects are in '/_posts'
+## Usage
 
-Images are in '/img/portfolio'
+Since this is a Jekyll theme, every command described in the [Jekyll documentation](https://jekyllrb.com/docs/) is avaialable.
 
-###About
+### Development
 
-Images are in '/img/about/'
+To start the development workflow, run:
 
-###Team
+```bash
+bundle exec jekyll serve --livereload
+```
 
-Team members and info are in '_config.yml'
+### Production
 
-Images are in '/img/team/'
+To build the project, run:
 
-
-# Demo
-
-View this jekyll theme in action [here](https://y7kim.github.io/agency-jekyll-theme)
-
-=========
-For more details, read [documentation](http://jekyllrb.com/)
+```bash
+bundle exec jekyll build
+```

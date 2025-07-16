@@ -1,20 +1,36 @@
 ---
 layout: default
+title: Sera - OnePage Multi-Purpose Theme
 ---
 
-<div class="home">
 
-  <h1>Posts</h1>
+{% include sections/offer.html offer-text="<strong>Open Enrollment is now available!</strong><span class=\"thin\"></span>" button-text="Apply Now" %}
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+{% include sections/about.html %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+{% include sections/features.html %}
 
-</div>
+{% include sections/portfolio.html %}
+
+{% comment %}
+ include sections/parallax-features.html
+{% endcomment %}
+
+{% include sections/offer.html offer-text="<strong>Open Enrollment is now available!</strong><span class=\"thin\"></span>" button-text="Apply Now" %}
+
+{% include sections/testimonials.html %}
+
+{% comment %}
+ include sections/blog.html %}
+{% endcomment %}
+
+{% include sections/team.html %}
+
+{% include sections/offer.html offer-text="<strong>Open Enrollment is now available!</strong><span class=\"thin\"></span>" button-text="Apply Now" %}
+
+{% comment %}
+include sections/prices.html
+{% endcomment %}
+
+{% include sections/contact.html %}
+

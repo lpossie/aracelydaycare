@@ -1,70 +1,553 @@
-# Welcome to Jekyll!
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
+# Sera - OnePage Jekyll Theme
+# Configuration File
 #
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 
-title: Aracely Daycare
-email: vilma@possiefamily.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+# Information for compile
+exclude: ["Gemfile", "README.md"]
 
-# Build settings
-theme: minima
+# Sass configuration
+sass:
+  sass_dir: _scss
+
+# Information for deploy
+baseurl: ""
+
+# the base hostname & protocol for your site
+url: "http://localhost:4000"
+
+####################################
+######   Optional Features    ######
+####################################
+smooth-scroll: false
+
+####################################
+###########   Plugins    ###########
+####################################
 plugins:
-  - jekyll-feed
+  - jekyll-archives
 
-# Team names, titles and social links
-people:
-- name: Vilma Possie
-  pic: 1
-  position: Owner
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: "archive"
+  permalinks:
+    category: "/category/:name/"
+    tag: "/tag/:name/"
 
-  # Postal address (add as many lines as necessary)
-  address:
-    - line: 894 W 3950 S
-    - line: Riverdale, UT 84405
+####################################
+########### Customization ##########
+####################################
+collections:
+  members:
+    output: true
 
-# Build settings
-markdown: kramdown
-permalink: pretty
+#######################################################
+#######################################################
+###############   HEADER INFORMATIONS   ###############
+#######################################################
+#######################################################
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
+# This is your site title
+title: Aracely's Daycare
+# Website language
+lang: en-US
+# Header Title
+header-title: <strong>IT'S NICE TO MEET YOU!!</strong>
+# Header Tagline
+headter-tagline: Welcome To Our Daycare
+
+####################################
+######   CTA Header Buttons   ######
+####################################
+
+# Focus Buttons
+header-focus-button:
+  title: Download Now
+  url: https://themeforest.net/collections/6069390-sera
+
+# Secondary Buttons
+header-secondary-button:
+  title: Discover More
+  url: http://themeforest.net/user/ohkimur
+
 #
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
+# This is your email adress, contact from send here all emails from contact section
+# IMPORTANT: you can modify contact form from this static template, but now works contact form works with a free external server
+# To configure this contact form, first please send a fictive email afeter you enter below your email and verify that :)
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+email: daycare@possiefamily.com
+
+# Offer Banner Link
+# Default link is a link to all Sera OnePage products
+banner-link: https://themeforest.net/collections/6069390-sera
+
+####################################
+######  Global Social Links   ######
+####################################
+youtube: "#"
+pinterest: "#"
+facebook: "https://www.facebook.com/profile.php?id=61576165295022"
+twitter: "#"
+google-plus: "#"
+vimeo: "#"
+
+#########################
+######   Widgets   ######
+#########################
+
+#
+# About Blog Author Widget
+#
+about-widget:
+  author-avatar: avatar-02.jpg
+  author-name: John Doe
+  author-tagline: Blog Author
+  author-info: Cum sociis que penatibus et magnis dis parturient montes lorem, nascetur ridiculus mus. Donec quam felis, ultricies.
+  author-social-links:
+    youtube: "#"
+    pinterest: "#"
+    facebook: "#"
+    twitter: "#"
+    google-plus: "#"
+
+# Google Map JS api
+key-api: AIzaSyC0XiBqye2ydVbAWfxt41lFOYl4lfvDDew
+map-text: Aracely's Daycare Location
+map-lat: 41.19169376657437
+map-lng: -112.0008305868761
+
+# Enter your Mailchimp User ID and Campaign ID
+# @TODO: Add in a link for where to find these
+mailchimp:
+  user-id: REPLACEME
+  list-id: REPLACEME
+
+####
+#
+# Hi you now use Sera - OnePage Jekyll Theme created by Ohkimur
+#
+# Below are each section from the website in order from top to bottom
+# @TODO Edit each sections with your real information and each section from Sera will autocomplete with your information
+#
+####
+
+#####################################
+#############   About   #############
+#####################################
+about-title: About Our Daycare
+about-description: <p>Aracely's Day Care is a licensed childcare facility that provides a nurturing home environment and fosters the skills necessary for lifelong learning. Children learn through creative play, socialization and a developmentally appropriate curriculum. Aracely's Day Care is a home away from home where children feel safe and loved.</p><p>With over 30 years of professional experience and early childhood development training, Aracely Possié has a passion for working with young children and is an excellent childcare provider. Aracely believes that quality childcare involves not only meeting the basic needs of the child but also creating a safe, clean and happy environment where children can thrive socially, emotionally and academically. As a mother of 6 children (and grandmother to 17), Aracely founded her own childcare center to meet the needs of families who share these same values.</p>
+
+#####################################
+#############  Features  ############
+#####################################
+features-title: Our Kids
+features-description: Aracely's Day Care serves children ages six weeks through preschool (4-5 years old). To better meet the needs of each individual child, there is a limited number of children accepted within each age group. Please call us at (801) 675-8552 for availability.
+
+#
+# Features
+#
+features:
+    # Feature
+  - title: Home Environment
+    description: Children thrive in spaces that feel safe, familiar, and filled with care. Our daycare offers a warm, home-like environment where little ones feel comfortable and secure. The space is spotless, thoughtfully organized, and designed to reflect the cozy comforts of home.
+    icon: pe-7s-home
+
+     # Feature
+  - title: Healthy Meals
+    description: Nutritious home made meals are made for all children. The meals consist of a balanced diet of vegetables, fruits, breads, milk and cereals. All meals and diets are approved via Alliance for Children. Special diets can be accommodated for a child with allergies or requires special diet.
+    icon: pe-7s-like
+
+  # Feature
+  - title: Customized Curriculum
+    description: The curriculum is simple and nurturing—designed to support each child’s natural curiosity through play, exploration, and self-discovery. Daily activities encourage social skills, creativity, and confidence in a calm, caring environment where children feel safe to grow at their own pace.
+    icon: pe-7s-study
+
+
+
+
+#####################################
+############  Portfolio  ############
+#####################################
+portfolio-title: Tour
+portfolio-description: Take a quick virtual tour and get a glimpse of our warm, welcoming daycare environment! We’ve created a space that feels like home—clean, organized, and filled with love.  Want to see it in person? We’d be happy to show you around! Just click <a href="#contact">here</a> to schedule a visit and fill out the form.
+
+#
+# Portfolio Grid
+#
+portfolio-categories:
+  [Indoor, Outdoor, Learning, Playtime, Lunch]
+portfolio:
+  # Portfolio Item
+  - title: Play Room
+    categories: [Indoor]
+    image: indoor_01.jpg
+    url: "#"
+
+  # Portfolio Item
+  - title: Living Room
+    categories: [Indoor]
+    image: indoor_02.jpg
+    url: "#"
+
+  # Portfolio Item
+  - title: Dining Room
+    categories: [Indoor]
+    image: indoor_03.jpg
+    url: "#"
+
+  # Portfolio Item
+  - title: Backyard
+    categories: [Outdoor]
+    image: outdoor_01.jpg
+    url: "#"
+
+  # Portfolio Item
+  - title: Backyard 2
+    categories: [Outdoor]
+    image: outdoor_02.jpg
+    url: "#"
+
+  # Portfolio Item
+  - title: Backyard 3
+    categories: [Outdoor]
+    image: outdoor_03.jpg
+    url: "#"
+
+    portfolio:
+  # Portfolio Item
+  - title: PlayTime
+    categories: [Learning]
+    image: learning_01.jpeg
+    url: "#"
+
+  # Portfolio Item
+  - title: Reading Time
+    categories: [Learning]
+    image: learning_02.jpeg
+    url: "#"
+
+  # Portfolio Item
+  - title: Music Time
+    categories: [Learning]
+    image: learning_03.jpeg
+    url: "#"
+
+  # Portfolio Item
+  - title: Colors in Spanish
+    categories: [Learning]
+    image: learning_04.jpeg
+    url: "#"
+
+  # Portfolio Item
+  - title: Coloring Time
+    categories: [Learning]
+    image: learning_05.jpeg
+    url: "#"
+
+  # Portfolio Item
+  - title: Presentation
+    categories: [Learning]
+    image: learning_06.jpeg
+    url: "#"
+
+  # Portfolio Item
+  - title: Playtime Time 1
+    categories: [Outdoor, Playtime]
+    image: playtime_01.jpeg
+    url: "#"
+
+  # Portfolio Item
+  - title: Playtime Time 2
+    categories: [Outdoor, Playtime]
+    image: playtime_02.jpeg
+    url: "#"
+
+  # Portfolio Item
+  - title: Playtime Time 3
+    categories: [Outdoor, Playtime]
+    image: playtime_03.jpeg
+    url: "#"
+
+  # Portfolio Item
+  - title: Playtime Time 4
+    categories: [Indoor, Playtime]
+    image: playtime_04.jpg
+    url: "#"
+
+  # Portfolio Item
+  - title: Learning Numbers
+    categories: [Indoor, Learning]
+    image: playtime_05.jpg
+    url: "#"
+
+  # Portfolio Item
+  - title: Baby Time
+    categories: [Indoor]
+    image: playtime_06.jpg
+    url: "#"
+
+  # Portfolio Item
+  - title: Lunchtime 1
+    categories: [Indoor, Lunch]
+    image: lunchtime_01.jpeg
+    url: "#"
+
+  # Portfolio Item
+  - title: Lunchtime 2
+    categories: [Indoor, Lunch]
+    image: lunchtime_02.jpeg
+    url: "#"
+
+  # Portfolio Item
+  - title: Lunchtime 3
+    categories: [Indoor, Lunch]
+    image: lunchtime_03.jpeg
+    url: "#"
+#####################################
+##########  Core Features  ##########
+#####################################
+core-title: Core Features
+core-description: Duis at odio vitae ex gravida volutpat. Nulla finibus aliquet diam ut eleifend. Mauris consequat interdum quam. Mauris dui sapien, efficitur et cursus id, molestie fringilla turpis aliquet diam ut eleifend.
+
+#
+# Core Features Left
+#
+core-features-left:
+  # Feature
+  - name: Creative
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing diam.
+    icon: pe-7s-light
+
+  # Feature
+  - name: Minimalism
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing diam.
+    icon: pe-7s-drop
+
+  # Feature
+  - name: Clean Coding
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing diam.
+    icon: pe-7s-coffee
+
+  # Feature
+  - name: Friendly
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing diam.
+    icon: pe-7s-smile
+
+#
+# Core Features Right
+#
+core-features-right:
+  # Feature
+  - name: Branding
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing diam.
+    icon: pe-7s-wine
+
+  # Feature
+  - name: Web Design
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing diam.
+    icon: pe-7s-monitor
+
+  # Feature
+  - name: Graphic Design
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing diam.
+    icon: pe-7s-crop
+
+  # Feature
+  - name: Photography
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing diam.
+    icon: pe-7s-camera
+
+#####################################
+########### Testimonials ############
+#####################################
+testimonials-title: Testimonials
+testimonials-description: There’s nothing more meaningful to us than the kind words and experiences shared by our daycare families. Their feedback is a true reflection of the love, care, and dedication we pour into every day. We’re proud to have earned the trust of our families—and their reviews speak volumes.
+
+#
+# Testimonials
+#
+testimonials:
+  # Client
+  - name: Angela Rivera
+    url: https://www.google.com/search?sca_esv=8fe472cf0c0bad30&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E4zumJJ6_Xv8lqyA6BsQ9sniMqsI3wmmzHl4oFjn2a5cYHfGoRLZVsjtnWI3f9zfS_ivg-Oddwtw2etirvIk2ec_ml0HWF6rT335OD9U5m3WV9QOxg%3D%3D&q=Aracely%27s+Daycare+Reviews&sa=X&ved=2ahUKEwiM04SosquOAxUnM0QIHfgyKq4Q0bkNegQIQRAE&biw=2544&bih=1246&dpr=1
+    url-text: Google Reviews
+    avatar: a.png
+    cite: I have had nothing but an amazing interaction with Aracely! She is very understanding, kind, and professional. I have a set of Twins at the age of 1 and  they had a rough start to daycare. So did I. I was very emotional. But Aracely was kind enough to take the extra effort and  make sure I was updated  constantly everyday the first week we were adjusting to daycare since it was the first time ever. I was very iffy about having my kids in daycare at all but I was referred to Aracely from a friend that always spoke highly of her. And I am so glad this is where my kids are going. I have never been more comfortable with someone other than my own mother watching my twins.
+    logo-img: google_logo.png
+
+  # Client
+  - name: S
+    url: https://www.google.com/search?sca_esv=8fe472cf0c0bad30&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E4zumJJ6_Xv8lqyA6BsQ9sniMqsI3wmmzHl4oFjn2a5cYHfGoRLZVsjtnWI3f9zfS_ivg-Oddwtw2etirvIk2ec_ml0HWF6rT335OD9U5m3WV9QOxg%3D%3D&q=Aracely%27s+Daycare+Reviews&sa=X&ved=2ahUKEwiM04SosquOAxUnM0QIHfgyKq4Q0bkNegQIQRAE&biw=2544&bih=1246&dpr=1
+    url-text: Google Reviews
+    avatar: s.png
+    cite: My 4 year old twins have been with Aracely since they were two. She has provided a loving, structured environment that kids can grow and flourish in. I believe my children are better having spent time with her then just being raised by me. Aracely has been reliable and direct with the schedule and expectations. This is a place for parents who are looking for an excellent nurturing environment as a priority versus having 13 hours open a day like the big chain centers.
+    logo-img: google_logo.png
+
+  # Client
+  - name: Emily Abegglen
+    url: https://www.google.com/search?sca_esv=8fe472cf0c0bad30&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E4zumJJ6_Xv8lqyA6BsQ9sniMqsI3wmmzHl4oFjn2a5cYHfGoRLZVsjtnWI3f9zfS_ivg-Oddwtw2etirvIk2ec_ml0HWF6rT335OD9U5m3WV9QOxg%3D%3D&q=Aracely%27s+Daycare+Reviews&sa=X&ved=2ahUKEwiM04SosquOAxUnM0QIHfgyKq4Q0bkNegQIQRAE&biw=2544&bih=1246&dpr=1
+    url-text: Google Reviews
+    avatar: e.png
+    cite: I cannot recommend Aracely enough! My son is 6 months old and has been going to her since he was 3 months old and I knew that she was the only one I would trust with my infant as a first time mom. Her home is immaculately clean and a great environment for him to thrive in. She is always updating me on his progress and I know that she is truly invested in and loves each of the children in her care. He lights up the minute he sees her every morning!
+    logo-img: google_logo.png
+
+  # Client
+  - name: Lindsey Ketcham
+    url: https://www.google.com/search?sca_esv=8fe472cf0c0bad30&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E4zumJJ6_Xv8lqyA6BsQ9sniMqsI3wmmzHl4oFjn2a5cYHfGoRLZVsjtnWI3f9zfS_ivg-Oddwtw2etirvIk2ec_ml0HWF6rT335OD9U5m3WV9QOxg%3D%3D&q=Aracely%27s+Daycare+Reviews&sa=X&ved=2ahUKEwiM04SosquOAxUnM0QIHfgyKq4Q0bkNegQIQRAE&biw=2544&bih=1246&dpr=1
+    url-text: Google Reviews
+    avatar: l.png
+    cite: I highly recommend Aracely to anyone looking for childcare. Aracely is one in a million. Her home is meticulous, her curriculum is exceptional, her nutrition plan is perfect and her ability to love and care for these kids is unlike anything I have experienced. My two girls went to “Mama-Cely” from birth until Kindergarten and honestly learned the best parts of them from her. They were well fed, loved, nurtured, taught, well rested and felt right at home. I owe so much to Cely and I will never stop singing her praises.
+    logo-img: google_logo.png
+
+  # Client
+  - name: ShayLee Nye
+    url: https://www.google.com/search?sca_esv=8fe472cf0c0bad30&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E4zumJJ6_Xv8lqyA6BsQ9sniMqsI3wmmzHl4oFjn2a5cYHfGoRLZVsjtnWI3f9zfS_ivg-Oddwtw2etirvIk2ec_ml0HWF6rT335OD9U5m3WV9QOxg%3D%3D&q=Aracely%27s+Daycare+Reviews&sa=X&ved=2ahUKEwiM04SosquOAxUnM0QIHfgyKq4Q0bkNegQIQRAE&biw=2544&bih=1246&dpr=1
+    url-text: Google Reviews
+    avatar: shaylee_nye.png
+    cite: Our son has attended Aracely's Daycare since June, and we are just in love with the care Aracely has given to our sweet boy. Aracely and her Husband are the most kind, patient people I have ever met, we are very thankful to have them in our lives. Knowing that our son is safe, eating healthy meals, and getting a proper nap time is such a relief, not having to worry about that makes everything so much better! Thank you Arecely and Family!
+    logo-img: google_logo.png
+  # Client
+  - name: Bryce Abegglen
+    url: https://www.google.com/search?sca_esv=8fe472cf0c0bad30&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E4zumJJ6_Xv8lqyA6BsQ9sniMqsI3wmmzHl4oFjn2a5cYHfGoRLZVsjtnWI3f9zfS_ivg-Oddwtw2etirvIk2ec_ml0HWF6rT335OD9U5m3WV9QOxg%3D%3D&q=Aracely%27s+Daycare+Reviews&sa=X&ved=2ahUKEwiM04SosquOAxUnM0QIHfgyKq4Q0bkNegQIQRAE&biw=2544&bih=1246&dpr=1
+    url-text: Google Reviews
+    avatar: bryce_abegglen.png
+    cite: Aracely's Daycare is the top notch for your young kids. She does a lot to help your kids stay engaged and grow.
+    logo-img: google_logo.png
+
+  # Client
+  - name: JR Garcia
+    url: https://www.google.com/search?sca_esv=8fe472cf0c0bad30&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E4zumJJ6_Xv8lqyA6BsQ9sniMqsI3wmmzHl4oFjn2a5cYHfGoRLZVsjtnWI3f9zfS_ivg-Oddwtw2etirvIk2ec_ml0HWF6rT335OD9U5m3WV9QOxg%3D%3D&q=Aracely%27s+Daycare+Reviews&sa=X&ved=2ahUKEwiM04SosquOAxUnM0QIHfgyKq4Q0bkNegQIQRAE&biw=2544&bih=1246&dpr=1
+    url-text: Google Reviews
+    avatar: jr_garcia.png
+    cite: We have had our kids attending her daycare for a couple months now. We love it & our kids enjoy being there. The best daycare we have found after 4 years of trying different options.
+    logo-img: google_logo.png
+
+  # Client
+  - name: Camille Butcher
+    url: https://www.google.com/search?sca_esv=8fe472cf0c0bad30&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E4zumJJ6_Xv8lqyA6BsQ9sniMqsI3wmmzHl4oFjn2a5cYHfGoRLZVsjtnWI3f9zfS_ivg-Oddwtw2etirvIk2ec_ml0HWF6rT335OD9U5m3WV9QOxg%3D%3D&q=Aracely%27s+Daycare+Reviews&sa=X&ved=2ahUKEwiM04SosquOAxUnM0QIHfgyKq4Q0bkNegQIQRAE&biw=2544&bih=1246&dpr=1
+    url-text: Google Reviews
+    avatar: camille_butcher.png
+    cite: We have only wonderful things to say about Aracely's.
+    logo-img: google_logo.png
+
+#####################################
+############# Our Blog ##############
+#####################################
+blog-title: Our Blog
+blog-description: Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi id ornare ante. Cras odio nibh, volutpat vitae volutpat sed, suscipit et nisi. Nulla a tellus at turpis gravida congue non sed nisl. Pellentesque scelerisque eu neque et tincidunt.
+
+#####################################
+############### Team ################
+#####################################
+team-title: Meet Our Team
+team-description: Our team is the heart of our daycare. With warmth, love, and dedication, they create a safe and caring space where every child can thrive.
+
+#
+# Team Members
+#
+team:
+  # Team Member
+  - name: Aracely Possié
+    tagline: Owner
+    avatar: aracely.jpg
+    page: aracely.html
+
+    # Social Links
+    # youtube: "#"
+    # pinterest: "#"
+    # facebook: "#"
+    # twitter: "#"
+    # google-plus: "#"
+    # vimeo: "#"
+
+  # Team Member
+  - name: Arianna Possié
+    tagline: Teacher
+    avatar: arianna.jpg
+    page: arianna.html
+
+    # Social Links
+    # youtube: "#"
+    # pinterest: "#"
+    # facebook: "#"
+    # twitter: "#"
+    # google-plus: "#"
+    # vimeo: "#"
+
+  # # Team Member
+  # - name: Johnatan Doe
+  #   tagline: Hacker
+  #   avatar: avatar-04.jpg
+
+  #   # Social Links
+  #   youtube: "#"
+  #   pinterest: "#"
+  #   facebook: "#"
+  #   twitter: "#"
+  #   google-plus: "#"
+  #   vimeo: "#"
+
+  # # Team Member
+  # - name: Ecaterina Doe
+  #   tagline: Support Expert
+  #   avatar: avatar-03.jpg
+
+  #   # Social Links
+  #   youtube: "#"
+  #   pinterest: "#"
+  #   facebook: "#"
+  #   twitter: "#"
+  #   google-plus: "#"
+  #   vimeo: "#"
+
+#####################################
+########## Pricing Tables ###########
+#####################################
+pricing-title: Pricing Tables
+pricing-description: Nulla a tellus at turpis gravida congue non interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi id ornare ante. Cras odio nibh, volutpat vitae volutpat sed, suscipit et nisi. Nulla a tellus at turpis gravida congue non sed nisl. Pellentesque scelerisque eu neque et tincidunt.
+
+#
+# Plan Personal
+#
+plan-personal-price: $99
+plan-personal-offer-1-title: 01 PSD Pack
+plan-personal-offer-1-info: Mauris gravida fringilla est. Proin sodales sed erat et cursus. Mauris quis posuere enim.
+plan-personal-offer-2-title: 100 Support Tickets
+plan-personal-offer-2-info: Mauris gravida fringilla est. Proin sodales sed erat et cursus. Mauris quis posuere enim.
+plan-personal-url: "#"
+
+#
+# Plan Business
+#
+plan-business-price: $499
+plan-business-offer-1-title: 05 PSD Pack
+plan-business-offer-1-info: Mauris gravida fringilla est. Proin sodales sed erat et cursus. Mauris quis posuere enim.
+plan-business-offer-2-title: 1000 Support Tickets
+plan-business-offer-2-info: Mauris gravida fringilla est. Proin sodales sed erat et cursus. Mauris quis posuere enim.
+plan-business-url: "#"
+
+#
+# Plan Ultimate
+#
+plan-ultimate-price: $999
+plan-ultimate-offer-1-title: 10 PSD Pack
+plan-ultimate-offer-1-info: Mauris gravida fringilla est. Proin sodales sed erat et cursus. Mauris quis posuere enim.
+plan-ultimate-offer-2-title: Support Unlimited
+plan-ultimate-offer-2-info: Mauris gravida fringilla est. Proin sodales sed erat et cursus. Mauris quis posuere enim.
+plan-ultimate-url: "#"
+
+#####################################
+############   Contact   ############
+#####################################
+contact-title: Contact Us
+contact-description: We’d love to hear from you! Whether you want to to apply, have questions, schedule a tour or simply want to learn more about our daycare, feel free to reach out. Send us an email by filling out the form below or call us at <a href="tel:+18016758552">(801) 675-8552</a>.  We’re here to help and happy to connect!
+
+#####################################
+#############   Footer   ############
+#####################################
+footer-description: 
+footer-copyright-text: Aracely's Daycare
+footer-copyright-url: 
+footer-copyright-year: 2025
