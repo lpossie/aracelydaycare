@@ -113,10 +113,10 @@ about-widget:
     google-plus: "#"
 
 # Google Map JS api
-key-api: AIzaSyC0XiBqye2ydVbAWfxt41lFOYl4lfvDDew
-map-text: Aracely's Daycare Location
-map-lat: 41.19169376657437
-map-lng: -112.0008305868761
+# key-api: AIzaSyC0XiBqye2ydVbAWfxt41lFOYl4lfvDDew
+# map-text: Aracely's Daycare Location
+# map-lat: 41.19169376657437
+# map-lng: -112.0008305868761
 
 # Enter your Mailchimp User ID and Campaign ID
 # @TODO: Add in a link for where to find these
